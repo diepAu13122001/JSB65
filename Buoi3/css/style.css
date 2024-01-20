@@ -1,0 +1,21 @@
+#flex-box {
+  font-family: "Rubik Burned", system-ui;
+  background-color: bisque;
+  /* padding: 15px; */
+  /* display flex*/
+  display: flex;
+  /* justify-content: space-evenly; */
+  /* flex-direction: row; => theo chieu ngang */
+  /* flex-direction: column-reverse; => theo chieu doc*/
+  /* flex-wrap: wrap-reverse; =>co xuong hang */
+  /* flex-wrap: nowrap; khong xuong hang */
+  flex-flow: row nowrap;
+}
+
+.item {
+  width: 500px;
+  height: 100px;
+  background-color: blueviolet;
+  font-size: 50px;
+  color: aliceblue;
+}
