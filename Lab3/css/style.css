@@ -1,0 +1,66 @@
+* {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+nav,header,footer,article,aside {
+  border: 1px solid black;
+}
+
+body {
+    display: flex;
+}
+
+nav {
+  background-color: antiquewhite;
+  width: 30%;
+  height: 600px;
+}
+
+main {
+    width: 70%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+header,footer {
+  background-color: aqua;
+}
+
+header {
+    height: 100px;
+}
+
+footer {
+    min-height: 100px;
+}
+article {
+  background-color: bisque;
+  min-height: 400px;
+  width: 100%;
+}
+
+aside {
+  background-color: thistle;
+  min-height: 100%;
+}
+
+.content {
+    height: 500px;
+    display: flex;
+    flex-flow: row nowrap;
+    /* align-items: stretch; */
+}
+
+.content .left {
+    width: 80%;
+    /* display: flex; */
+    /* flex-flow: column wrap; */
+
+}
+
+.content .right {
+    width: 20%;
+    /* max-height: 500px; */
+}
+
