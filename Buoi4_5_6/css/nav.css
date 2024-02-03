@@ -1,0 +1,40 @@
+body {
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    margin: 0 auto;
+}
+
+nav {
+    width: 100%;
+    background-color: black;
+    height: max-content;
+    color: white;
+}
+
+nav {
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    display: block; 
+    margin: 0 15px;
+    padding: 5px 15px;
+}
+
+nav li, nav li a {
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+
+nav li:hover {
+    background-color: white;
+}
+
+nav li a:hover {
+    color: black;
+}
+
+nav ul {
+    margin: 0 auto;
+}
