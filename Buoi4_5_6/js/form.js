@@ -17,7 +17,7 @@ function submit(e) {
   const user_email = document.getElementById("contact-email").value;
   const user_message = document.getElementById("contact-message").value;
 
-//   e.preventDefault(); // chan hoat dong mac dinh
+  e.preventDefault(); // chan hoat dong mac dinh
   const validated = validateForm(user_name, user_email, user_message);
   if (validated == true) {
     console.table([user_name, user_email, user_message]);
