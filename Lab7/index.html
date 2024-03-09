@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 7</title>
+  </head>
+  <body>
+    <!-- form -->
+    <form action="" method="get">
+      <!-- ten -->
+      <label for="student-name">Name</label>
+      <input type="text" name="student-name" id="student-name" required />
+
+      <!-- diem -->
+      <label for="student-point">Point</label>
+      <input
+        type="number"
+        min="0"
+        max="10"
+        name="student-point"
+        id="student-point"
+        required
+      />
+
+      <!-- submit button -->
+      <input type="submit" value="Save" id="submit-form" />
+    </form>
+
+    <!-- js -->
+    <script>
+      // luu gia tri cua form
+      function saveLocal(name, point) {
+        const student = { stu_name: name, stu_point: point };
+        localStorage.setItem(name, JSON.stringify(student));
+      }
+
+      // xuat lai ket qua
+      function xuatKetQua(name, point) {
+        // an form
+        const form = document.querySelector("form");
+        form.style = "display: none;";
+        // hien ket qua
+        const result = document.createElement("h1");
+        result.innerText = name + ": " + xepHang(point);
+
+        document.querySelector("body").prepend(result);
+      }
+
+      // xep hang
+      function xepHang(point) {
+        point = parseFloat(point);
+        if (point < 5) {
+          return "F";
+        } else if (point < 7) {
+          return "C";
+        } else if (point < 9) {
+          return "B";
+        } else return "A";
+      }
+
+      // bat su kien cho button submit
+      const submit_btn = document.getElementById("submit-form");
+      submit_btn.addEventListener("click", (e) => {
+        try {
+          // lay du lieu cua form
+          const student_name = document.querySelector("#student-name").value;
+          const student_point = document.getElementById("student-point").value;
+
+          saveLocal(student_name, student_point);
+          xuatKetQua(student_name, student_point);
+        } catch (e) {
+            alert(e);
+        }
+      });
+    </script>
+  </body>
+</html>
